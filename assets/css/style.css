@@ -1,9 +1,213 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Titillium+Web:wght@900&display=swap");
-
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  outline: none;
 }
+
+:root {
+  font-size: 0.785rem;
+  --blue: #0d6efd;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #198754;
+  --teal: #20c997;
+  --cyan: #0dcaf0;
+  --white: #fff;
+  --gray: #adb5bd;
+  --slideshow-shadow:#737879;
+  --font-family-slidershow:"Titillium Web", sans-serif;
+  --font-weight-slidershow:900;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+main section.slider {
+  max-width: 1140px;
+  position: relative;
+  margin: auto;
+  /* Adjust styles for iPad mini portrait orientation */
+}
+main section.slider .slideshow-container {
+  max-width: 1140px;
+  position: relative;
+  margin: auto;
+}
+main section.slider .box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+main section.slider .mySlides img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+}
+main section.slider .text {
+  color: var(--white);
+  font-family: var(--font-family-slidershow);
+  font-weight: var(--font-weight-slidershow);
+  margin: 2rem 6rem;
+  padding: 2rem 6rem;
+  position: absolute;
+  top: 15rem;
+  text-align: center;
+  text-shadow: 1px 2px 2px var(--slideshow-shadow);
+}
+main section.slider .text h1 {
+  color: var(--white);
+  font-size: 2.7rem;
+  padding-left: 1rem;
+}
+main section.slider .text span {
+  color: var(--yellow);
+}
+main section.slider .text p {
+  padding: 0 6rem;
+  font-weight: 300;
+  font-family: "Poppins";
+}
+main section.slider .dot-container {
+  text-align: center;
+  margin-top: 55%;
+}
+main section.slider .dot-container .dot {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0 5rem;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+main section.slider .dot-container .active,
+main section.slider .dot-container .dot:hover {
+  background-color: var(--white);
+}
+main section.slider .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (device-width: 390px) and (device-height: 844px) and (orientation: portrait) {
+  main section.slider .slideshow-container {
+    max-width: 100%;
+    height: 500px;
+    margin-top: 7rem;
+  }
+  main section.slider .mySlides img {
+    height: 760px;
+  }
+  main section.slider .text {
+    margin: 1rem;
+    padding: 0.25rem;
+    top: 22rem;
+  }
+  main section.slider .text h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+  }
+  main section.slider .text p {
+    padding: 0;
+    font-size: 1.15rem;
+    font-weight: 400;
+  }
+  main section.slider .dot-container {
+    margin-top: 180%;
+  }
+  main section.slider .dot-container .dot {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0 1rem;
+    border: 4px solid var(--white);
+  }
+}
+@media screen and (device-width: 844px) and (device-height: 390px) and (orientation: landscape) {
+  main section.slider .slideshow-container {
+    max-width: 100%;
+    height: 500px;
+    margin-top: 7rem;
+  }
+  main section.slider .dot-container {
+    margin-top: 50%;
+  }
+  main section.slider .dot-container .dot {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0 1rem;
+    border: 4px solid var(--white);
+  }
+}
+@media screen and (max-device-width: 768px) and (orientation: portrait) {
+  main section.slider .slideshow-container {
+    max-width: 100%;
+    height: 500px;
+    margin-top: 7rem;
+  }
+  main section.slider .mySlides img {
+    height: 100vh;
+  }
+  main section.slider .text {
+    margin: 5rem;
+    padding: 5rem;
+    top: 26rem;
+  }
+  main section.slider .text h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+  }
+  main section.slider .text p {
+    margin: 0 -11rem;
+    padding: 0 0.95rem;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  main section.slider .dot-container {
+    margin-top: 125%;
+  }
+  main section.slider .dot-container .dot {
+    height: 2rem;
+    width: 2rem;
+    margin: 0 3rem;
+    border: 1px solid var(--white);
+  }
+}/*# sourceMappingURL=style.css.map */

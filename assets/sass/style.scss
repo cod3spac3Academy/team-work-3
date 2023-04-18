@@ -1,0 +1,191 @@
+@import 'resets';
+body {
+    width: 100%; 
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    section.slider {
+        max-width: 1140px; 
+        position: relative; 
+        margin: auto; 
+        .slideshow-container {
+            max-width: 1140px; 
+            position: relative; 
+            margin: auto;
+        }
+
+        .box {
+            width: 100%; 
+            height: 100%; 
+            position: absolute;
+        }
+
+        .mySlides {
+            img {
+                object-fit: cover; 
+                width: 100%; 
+                max-width: none; 
+                height: 100%;
+            }
+        }
+
+        .text {
+            color: var(--white); 
+            font-family: var(--font-family-slidershow); 
+            font-weight: var(--font-weight-slidershow); 
+            margin: 2rem 6rem; 
+            padding: 2rem 6rem; 
+            position: absolute;
+            top: 15rem; 
+            text-align: center; 
+            text-shadow: 1px 2px 2px var(--slideshow-shadow); 
+            h1 {
+                color: var(--white); 
+                font-size: 2.7rem;
+                padding-left: 1rem;
+            }
+
+            span {
+                color: var(--yellow);
+            }
+
+            p {
+                padding: 0 6rem;
+                font-weight: 300;
+                font-family: 'Poppins';
+            }
+        }
+
+        .dot-container {
+            text-align: center; 
+            margin-top: 55%; 
+            .dot {
+                cursor: pointer; 
+                height: 1.5rem; 
+                width: 1.5rem;
+                margin: 0 5rem; 
+                border: 2px solid var(--white);border-radius: 50%; 
+                display: inline-block; 
+                transition: background-color 0.6s ease;
+            }
+
+            .active,
+            .dot:hover {
+                background-color: var(--white);
+            }
+        }
+
+        .fade {
+            animation-name: fade; 
+            animation-duration: 1.5s;
+            
+            @keyframes fade {
+                from {
+                    opacity: .4;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+        }
+            @media screen and (device-width: 390px) and (device-height: 844px) and (orientation: portrait) {
+                .slideshow-container {
+                    max-width: 100%;
+                    height:500px;
+                    margin-top: 7rem;
+                }
+                .mySlides img {
+                    height: 760px;
+                }
+                .text { 
+                margin: 1rem; 
+                padding: 0.25rem; 
+                top: 22rem; 
+                    h1 {
+                    color: var(--white); 
+                    font-size: 3.5rem;
+                    }
+                    p {
+                    padding: 0;
+                    font-size: 1.15rem;
+                    font-weight: 400;
+                    }
+                }
+                .dot-container {
+                    margin-top: 180%;
+
+                    .dot {
+                        height: 2.5rem;
+                        width: 2.5rem;
+                        margin: 0 1rem;
+                        border: 4px solid var(--white);
+                    } 
+                    }
+            }
+            @media screen and (device-width: 844px) and (device-height: 390px) and (orientation: landscape) {
+                .slideshow-container {
+                        max-width: 100%;
+                        height: 500px;
+                        margin-top: 7rem;
+                    }
+                .dot-container {
+                        margin-top: 50%;
+                        .dot {
+                            height: 2.5rem;
+                            width: 2.5rem;
+                            margin: 0 1rem;
+                            border: 4px solid var(--white);
+                        }
+                    }
+            }
+            
+                /* Adjust styles for iPad mini portrait orientation */
+                @media screen and (max-device-width: 768px) and (orientation: portrait) {
+                    .slideshow-container {
+                        max-width: 100%;
+                        height: 500px;
+                        margin-top: 7rem;
+                    }
+        
+                    .mySlides img {
+                        height: 100vh;
+                    }
+        
+                    .text {
+                        margin: 5rem;
+                        padding: 5rem;
+                        top: 26rem;
+        
+                        h1 {
+                            color: var(--white);
+                            font-size: 3.5rem;
+                        }
+        
+                        p {
+                            margin: 0 -11rem;
+                            padding: 0 0.95rem;
+                            font-size: 1rem;
+                            font-weight: 300;
+                        }
+                    }
+        
+                    .dot-container {
+                        margin-top: 125%;
+        
+                        .dot {
+                            height: 2rem;
+                            width: 2rem;
+                            margin: 0 3rem;
+                            border: 1px solid var(--white);
+                        }
+                    }
+                }
+    }
+}
