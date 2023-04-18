@@ -7,3 +7,69 @@
   border: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: darkolivegreen;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+  width: 100vw;
+}
+header nav {
+  display: flex;
+  margin-left: auto;
+  width: 65%;
+}
+nav .icons {
+  padding: 2em;
+  justify-content: space-around;
+  background-color: bisque;
+  width: 50%;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  background-color: brown;
+  /* margin-top: 5em; */
+  padding: 1em;
+  list-style-type: none;
+}
+nav li {
+  padding-left: 2em;
+}
+nav .buttons {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  border-spacing: 0;
+  margin: 0;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  background-color: blueviolet;
+  width: 50%;
+  display: inline-block;
+}
+nav .buttons button {
+  padding: 1em 1.5em;
+  border: solid 2px black;
+  margin: 0;
+}
+nav .buttons :first-child {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-left: 2em;
+  background-color: blue;
+}
+nav .buttons :last-child {
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: blue;
+  padding-left: 2;
+}
