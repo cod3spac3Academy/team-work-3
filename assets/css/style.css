@@ -7,3 +7,35 @@
   border: 0;
   box-sizing: border-box;
 }
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+@media screen and (min-width: 768px) {
+  .games .text{
+    margin: 2em;
+  }
+  
+  section.games div.cards{
+    margin: 2em 0;
+  
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* styles */
+}
+@media screen and (min-width: 1400px) {
+  /* styles */
+}
+
+
+
