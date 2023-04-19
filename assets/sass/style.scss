@@ -1,7 +1,7 @@
 @import 'resets';
 body {
-    width: 100%; 
-    height: 100%;
+    width: 100vw; 
+    height: 100vh;
 }
 
 img {
@@ -10,44 +10,33 @@ img {
 }
 
 main {
-    section.slider {
-        max-width: 1140px; 
+    section.slider { 
+        display: flex;
         position: relative; 
         margin: auto; 
-        .slideshow-container {
-            max-width: 1140px; 
-            position: relative; 
-            margin: auto;
-        }
-
         .box {
             width: 100%; 
             height: 100%; 
             position: absolute;
         }
-
         .mySlides {
             img {
                 object-fit: cover; 
-                width: 100%; 
-                max-width: none; 
-                height: 100%;
             }
         }
-
         .text {
             color: var(--white); 
             font-family: var(--font-family-slidershow); 
             font-weight: var(--font-weight-slidershow); 
             margin: 2rem 6rem; 
             padding: 2rem 6rem; 
-            position: absolute;
-            top: 15rem; 
-            text-align: center; 
+            position: relative;
+            bottom: 78rem;
+            text-align: center;
             text-shadow: 1px 2px 2px var(--slideshow-shadow); 
             h1 {
                 color: var(--white); 
-                font-size: 2.7rem;
+                font-size: 7rem;
                 padding-left: 1rem;
             }
 
@@ -56,7 +45,8 @@ main {
             }
 
             p {
-                padding: 0 6rem;
+                padding: 0 40rem;
+                font-size: 2.5rem;
                 font-weight: 300;
                 font-family: 'Poppins';
             }
@@ -64,12 +54,12 @@ main {
 
         .dot-container {
             text-align: center; 
-            margin-top: 55%; 
+            margin-top: 58%; 
             .dot {
                 cursor: pointer; 
-                height: 1.5rem; 
-                width: 1.5rem;
-                margin: 0 5rem; 
+                height: 2.5rem; 
+                width: 2.5rem;
+                margin: 0 15rem; 
                 border: 2px solid var(--white);border-radius: 50%; 
                 display: inline-block; 
                 transition: background-color 0.6s ease;
@@ -145,8 +135,6 @@ main {
                         }
                     }
             }
-            
-                /* Adjust styles for iPad mini portrait orientation */
                 @media screen and (max-device-width: 768px) and (orientation: portrait) {
                     .slideshow-container {
                         max-width: 100%;
