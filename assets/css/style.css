@@ -128,3 +128,31 @@
   height: 50rem;
   opacity: 100%;
 }
+
+@media screen and (max-width:390px){
+  .team{
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .player-card img{
+    max-width: 80vw;
+  flex-direction: column;
+justify-content: center;}
+    .player-card h2{
+      line-height: 0.9;
+      max-width: 70vw;
+      justify-content: center;
+      display: flex;
+    }
+  .team-title{
+    padding-left: 1rem;
+    padding-right:1rem ;
+  }
+  .span-team{
+    line-height: 0.9em;
+    padding-left: 1.2rem; 
+    margin-bottom: 2rem; 
+  }
+}
