@@ -7,3 +7,97 @@
   border: 0;
   box-sizing: border-box;
 }
+
+.team-title {
+  margin-top: 0.6em;
+  font-family: "Titillium Web";
+  padding-left: 6rem;
+  font-size: 5rem;
+  line-height: 0.6em;
+  min-width: 7em;
+  /* margin-left: 3rem; */
+  /* margin-right: 3rem ; */
+}
+.team p {
+  font-family: "Poppins";
+  color: rgb(116, 115, 115);
+  padding-left: 6em;
+  padding-top: 1m;
+  padding-right: 6em;
+}
+
+.player-card {
+  margin: 1.5em;
+  max-height: fit-content;
+  flex: 60%;
+  position: relative;
+  font-family: "Titillium Web";
+  max-width: fit-content;
+  display: flex;
+  justify-content: center;
+  box-shadow: bottom 0 0 10px rgba(0, 0, 0, 0.7);
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+/* Box-Shadow para revisar */
+.span-team {
+  margin-top: 0;
+  color: #ffc311;
+  font-family: "Titillium Web";
+  padding-left: 6rem;
+  font-size: 5rem;
+}
+.player-card img {
+  max-height: 50rem;
+}
+
+.player-card h2 {
+  position: absolute;
+  top: 73%;
+  padding-left: 3.8em;
+  padding-right: 3.8em;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  margin: auto;
+  background-color: #ffc311;
+  color: #282828;
+  font-size: 2em;
+  opacity: 1;
+}
+
+.the-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player-card-hover {
+  opacity: 0.5;
+}
+
+.hover-dismisible {
+  width: 33.5rem;
+  height: 50rem;
+  background-color: black;
+  position: absolute;
+  opacity: 50%;
+}
+
+.hide-name {
+  display: none;
+}
+
+.fa-circle-plus {
+  position: absolute;
+  font-size: 4.5rem;
+  border-radius: 50%;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  color: #ffd969;
+
+}
+.icono {
+  position: absolute;
+  top: 60%;
+  display: flex;
+  justify-content: center;
+}
