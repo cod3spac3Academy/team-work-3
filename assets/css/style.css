@@ -6,4 +6,144 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
+
+.games h2 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 5rem;
+  color: black;
+  padding-left: 4rem;
+}
+
+.game-title{
+  color: #ffc311;
+}
+
+.games p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(116, 115, 115);
+  padding-bottom: 1rem;
+}
+.h2-p {
+  padding-left: 4rem;
+}
+
+.game img {
+max-height: 100vh;
+}
+
+.games-card {
+  display: flex;
+  justify-content: center;
+  /* padding: 0rem 2rem; */
+  flex-wrap: wrap;
+}
+
+.games-card h3{
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2rem;
+  color: black;
+  padding-left: 1rem;
+}
+
+.games-card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(116, 115, 115);
+  /* max-width: 30rem; */
+  padding: 1rem;
+}
+
+.game {
+  margin: 2rem;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.5);
+  width: 30%;
+}
+
+#icons-subtitle{
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: rgb(116, 115, 115);
+  padding: 0.5rem 1rem;
+}
+
+.footer-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  padding: 2rem 0rem;
+}
+
+.footer-container h4{
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+.h4-TGame{
+  color: #ffc311;
+}
+
+footer p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem 0rem;
+}
+
+footer a{
+  color: #ffc311;
+}
+
+@media screen and (max-width: 390px) {
+  .games-card {
+    flex-direction: column;
+    max-width: 80vh;
+  }
+
+  h2 {
+    line-height: 0.9;
+    padding-bottom: 1rem;
+  }
+
+  .game p{
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+}
+@media screen and (max-width: 820px) {
+  .games-card {
+    /* flex-direction: column; */
+    max-width: 100%;
+  }
+
+  h2 {
+    line-height: 0.9;
+    padding-bottom: 1rem;
+  }
+
+  .game p{
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+}
+
+/* @media screen and (width: 768px) {
+  .games h2 {
+    padding-left: 1rem;
+  }
+  .h2-p {
+    padding-left: 1rem;
+  }
+  .game p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: rgb(116, 115, 115);
+  }
+} */
