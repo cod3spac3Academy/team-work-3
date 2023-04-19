@@ -1,44 +1,11 @@
 window.addEventListener("load", () => {
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  function currentSlide(n) {
-    showSlides((slideIndex = n));
-  }
-
-  function showSlides(n) {
-    let i;
-    let slides = document.querySelectorAll(".mySlides");
-    let dots = document.querySelectorAll(".dot");
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].classList.remove("active");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active");
-  }
-
-  let dotElements = document.querySelectorAll(".dot");
-  for (let i = 0; i < dotElements.length; i++) {
-    dotElements[i].addEventListener("click", () => {
-      currentSlide(i + 1);
-    });
-  }
     // automatic Slider
-//     let slideIndex = 0;
+// let slideIndex = 0;
 // showSlides();
 
 // function showSlides() {
 //   let i;
-//   let slides = document.getElementsByClassName("mySlides");
+//   let slides = document.getElementsByClassName("slideShow");
 //   for (i = 0; i < slides.length; i++) {
 //     slides[i].style.display = "none";
 //   }
@@ -47,5 +14,26 @@ window.addEventListener("load", () => {
 //   slides[slideIndex-1].style.display = "block";
 //   setTimeout(showSlides, 2000); // Change image every 2 seconds
 // }
+// slide manual
+let slideIndex = 1;
+showSlides(slideIndex);
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slideShow");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
 });
