@@ -8,28 +8,30 @@
   box-sizing: border-box;
 }
 
+.team{
+  max-width: 2000px;
+}
 .team-title {
   margin-top: 0.6em;
   font-family: "Titillium Web";
-  padding-left: 6rem;
+  padding-left: 3rem;
   font-size: 5rem;
   line-height: 0.6em;
   min-width: 7em;
-  /* margin-left: 3rem; */
-  /* margin-right: 3rem ; */
 }
 .team p {
   font-family: "Poppins";
   color: rgb(116, 115, 115);
-  padding-left: 6em;
+  padding-left: 3rem;
   padding-top: 1m;
   padding-right: 6em;
+  margin-bottom: 4rem;
 }
 
 .player-card {
-  margin: 1.5em;
+  margin: 1.6em;
   max-height: fit-content;
-  flex: 60%;
+  flex: 70%;
   position: relative;
   font-family: "Titillium Web";
   max-width: fit-content;
@@ -43,7 +45,7 @@
   margin-top: 0;
   color: #ffc311;
   font-family: "Titillium Web";
-  padding-left: 6rem;
+  padding-left: 3rem;
   font-size: 5rem;
 }
 .player-card img {
@@ -70,21 +72,32 @@
   justify-content: center;
 }
 
-.player-card-hover {
-  opacity: 0.5;
-}
-
-.hover-dismisible {
-  width: 33.5rem;
-  height: 50rem;
+.player-card:hover img{
+  /* opacity: 0.5; */
   background-color: black;
-  position: absolute;
-  opacity: 50%;
+  filter: brightness(50%);
+}
+.player-card:hover #team-member {
+  opacity: 0%;
+}
+.player-card:hover .fa-circle-plus {
+  opacity: 100%;
+  -webkit-transition: opacity 1;
+  transition: opacity 1;
+}
+.fa-circle-plus:hover {
+  color: #ffd969;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
-.hide-name {
-  display: none;
-}
+/* .hover-dismisible {
+  background-color: black;
+  height: 50rem;
+  min-height: 30rem;
+  position: relative;
+  color: black;
+} */
 
 .fa-circle-plus {
   position: absolute;
@@ -92,12 +105,26 @@
   border-radius: 50%;
   padding-left: 0.4rem;
   padding-right: 0.4rem;
+  /* color: #ffd969; */
+  color: white;
+  opacity: 0;
+}
+.fa-circle-plus:hover {
+  position: absolute;
+  font-size: 4.5rem;
+  border-radius: 50%;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
   color: #ffd969;
-
+  /* color: white; */
+  opacity: 100%;
 }
 .icono {
   position: absolute;
   top: 60%;
   display: flex;
   justify-content: center;
+  width: 33.5rem;
+  height: 50rem;
+  opacity: 100%;
 }
