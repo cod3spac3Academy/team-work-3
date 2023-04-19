@@ -1,4 +1,6 @@
 // console.log('Hello World!');
-window.addEventListener("load", () => {
-  let playercard = document.querySelector(".player-card");
+
+let playerCard = document.querySelectorAll(".playerCard");
+playerCard.addEventListenr("mouseover", () => {
+    
 });
