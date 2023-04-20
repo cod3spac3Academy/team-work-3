@@ -91,13 +91,7 @@
   transition: opacity 0.5s;
 }
 
-/* .hover-dismisible {
-  background-color: black;
-  height: 50rem;
-  min-height: 30rem;
-  position: relative;
-  color: black;
-} */
+
 
 .fa-circle-plus {
   position: absolute;
@@ -130,7 +124,7 @@
 }
 @media (min-width: 1025px){
   .player-card img{
-    width: 21rem;
+    width: 25rem;
     
   }
   .player-card{
@@ -170,40 +164,54 @@
 }
 
   @media (max-width:390px){
+
+
     .icono{
       height: 10em;
       width: 15em;
     }
+
     .player-card{
+      max-height: none;
+      max-width: none;
       margin: auto;
-      margin-top: 1em;
+    }
+    .player-card img{
+      height: 28rem !important;
+      /* width: 17rem; */
+    }
+    .the-cards{
+      padding: none;
+      /* width: auto; */
+      margin: auto;
+      max-height: none;
+      flex-direction: column;
+      justify-content: center;
     }
     .team{
       justify-content: center;
       flex-direction: column;
+      max-width: 820px;
+      margin: auto !important;
+      /* padding: 1em; */
     }
     .team-title{
       font-size: 2.5em;
       padding-left: 1rem;
       padding-right: 1rem;
-      padding-bottom: 0.2em;
     }
   
   .span-team{
-    line-height: 0.9em;
+    line-height: 0.2rem;
     font-size: 2.5em;
     padding-left: 1rem;
     margin-left: 0;
   }
-  .player-card img{
-    height: 30em;
-  }
-
   .team p{
     margin:auto;
     margin-top: 0.5rem;
     padding-left: 1em;
-    max-width: 28em;
+    max-width: 30em;
     font-size: small;
     padding-right: 2em;
     margin-bottom: none;
@@ -214,37 +222,32 @@
     padding: 0.5rem 2rem;
   }
 
-
 }
 
-@media (min-width:768) {
+@media (max-width: 820px) {
   .team{
     justify-content: center;
     flex-direction: column;
-    /* margin-left: 1rem; */
-    /* margin-right: 0.5rem; */
+    margin: 0.6rem ;
+    padding: auto;
+  }
+  .player-card img{
+    height:22rem;
   }
   .team p{
     margin:auto;
-    margin-top: 1rem;
+    margin-top: 0.7rem;
     margin-left: 0.1rem;
     font-size: small;
-    max-width: 50em;
+    /* max-width: 90em; */
     padding-left: 1.5em;
-
   }
-  .player-card img{
-  max-height: 10em;
-  flex-direction: column;
-  justify-content: center;
-}
-    .player-card h2{
+  .player-card h2{
       line-height: 0.9;
-  
       justify-content: center;
       display: flex;
       font-size: 1em;
-    }
+  }
   .team-title{
     padding-left: 1rem;
     padding-right:1rem ;
@@ -252,7 +255,7 @@
   }
   .span-team{
     font-size: 3rem;
-    line-height: 0.9em;
+    line-height: 4rem;
     padding-left: 1.2rem; 
     margin-bottom: 2rem; 
   }
@@ -265,12 +268,9 @@
     height: 10rem;
     opacity: 100%;
   }
-  .the-cards{
-    padding-left: 0.2rem;
-    margin-left: 0em;
-    height: 10em;
-  }
+
   .player-card{
     padding-left: 0;
+    margin: 1rem;
   }
 }
