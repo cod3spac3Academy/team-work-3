@@ -7,3 +7,196 @@
   border: 0;
   box-sizing: border-box;
 }
+/* juanmi time ----> */
+/* empieza la secion de juegos */
+section.games {
+  width: 100%;
+  margin: auto;
+}
+/* titulo parte juegos  */
+section.games div.Title {
+  margin: 10% 5%;
+}
+section.games div.Title h1 {
+  font-weight: 900;
+  font-size: 2.8rem;
+  font-family: "titillium Web", sans-serif;
+}
+section.games div.Title h1 span {
+  color: #ffc824;
+}
+section.games div p {
+  font-family: "Poppins";
+  color: #777;
+  font-weight: 300;
+}
+/* cards de los juegos con su descripcion  */
+section.games div.newGames {
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3);
+  margin: 5% 5% 13% 5%;
+  color: rgb(30, 30, 30);
+}
+section.games div.newGames a {
+  text-decoration: none;
+}
+section.games div.newGames div.imgGame {
+  text-align: center;
+}
+section.games div.newGames img {
+  max-width: 100%;
+}
+section.games div.newGames div.gameTitle {
+  margin: 5% 5%;
+  padding-bottom: 1em;
+}
+section.games div.newGames div.gameTitle h3 {
+  font-family: "titillium Web", sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+section.games div.newGames div.gameTitle p {
+  font-family: "Poppins";
+  font-size: 0.7rem;
+  color: rgb(119, 117, 113);
+  padding: 0.8em 0em;
+}
+section.games div.newGames div.gameTitle p.description {
+  font-family: "Poppins";
+  font-size: 1rem;
+}
+div.gameTitle p.enlace i {
+  color: black;
+  font-size: 1.5em;
+  margin-right: 0.3em;
+}
+div.gameTitle p.enlace a {
+  color: rgb(119, 117, 113);
+}
+/* hacemos hover al h3 y al enlace */
+.newGames h3:hover,
+.newGames p.enlace > i:hover,
+.newGames p.enlace > a:hover {
+  color: #ffc824 !important;
+}
+/* div.gameTitle p.enlace a:hover {
+  color: rgb(232, 85, 32);
+} */
+/* Empieza el footer */
+footer {
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+  padding: 1em 1em;
+  font-family: "Poppins", sans-serif;
+}
+footer h3.headerFooter {
+  font-family: "titillium Web", sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+/* Color a los enlaces y al texto  */
+footer h3.headerFooter span {
+  color: #ffc824;
+}
+footer a {
+  color: #ffc824;
+}
+/* Icono y transformacion */
+footer:hover .iconoFooter i {
+  animation: icono-animacion 2s infinite;
+}
+
+@keyframes icono-animacion {
+  0% {
+    transform: scale(1);
+    color: black;
+  }
+  50% {
+    transform: scale(2);
+    color: red;
+  }
+  100% {
+    transform: scale(1);
+    color: black;
+  }
+}
+/* Estilos CSS para la vista desde tablet */
+
+/* hacemos que las cards se mantengan en columnas de 3  */
+
+/* Estilos CSS para la vista desde escritorio */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  /* todo */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* todo */
+  section.games div.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0% 2%;
+  }
+  section.games div.Title {
+    margin: 0% 2%;
+  }
+  section.games div.newGames div.gameTitle {
+    margin: 5% 5%;
+    padding-bottom: 0em;
+  }
+  section.games div.newGames div.gameTitle p.description {
+    padding: 0%;
+  }
+  
+
+  /* cambiamos el tamaño de la fuente  */
+  section.games div.newGames div.gameTitle h3 {
+    font-size: 1.4rem;
+  }
+  section.games div.newGames div.gameTitle p.enlace {
+    font-size: 0.7rem;
+  }
+
+  section.games div.Title h1 {
+    font-size: 4rem;
+  }
+  section.games div.Title p {
+    font-size: 1.4em;
+  }
+  section.games div.newGames div.gameTitle p.description {
+    font-size: 1em;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* todo */
+  section.games div.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0% 2%;
+  }
+  section.games div.newGames div.gameTitle {
+    padding-bottom: 0em;
+  }
+  section.games div.Title {
+    margin: 0% 2%;
+  }
+}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  section.games {
+    max-width: 1140px;
+  }
+  footer{
+    padding-bottom: 1.5em;
+  }
+}
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  section.games {
+    max-width: 1140px;
+  }
+}
