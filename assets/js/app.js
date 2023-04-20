@@ -9,18 +9,22 @@ window.addEventListener("load", () => {
 
 // Function to automatically change the slides
 const slideAuto = (slides, dots, length, interval) => {
-  let slideIndex = 1;
   slides.classList.add("fade"); // Add the "fade" class to the slides element
+  let slideIndex = 1;
   interval = setInterval(() => {
-    slideIndex++;
-    if (dots.children[slideIndex - 2].classList.contains("active")) {
-      dots.children[slideIndex - 2].classList.remove("active");
-      dots.children[slideIndex - 1].classList.add("active");
-    }
-    if (slideIndex > length) {
-      slideIndex = 1;
-    }
+    slideIndex = (slideIndex % length) + 1;
+    dots.querySelector(".active").classList.remove("active");
+    dots.children[slideIndex - 1].classList.add("active");
     slides.style.backgroundImage = `url('./img/slider/${slideIndex}.jpg')`;
+    // slideIndex++;
+    // if (dots.children[slideIndex - 2].classList.contains("active")) {
+    //   dots.children[slideIndex - 2].classList.remove("active");
+    //   dots.children[slideIndex - 1].classList.add("active");
+    // }
+    // if (slideIndex > length) {
+    //   slideIndex = 1;
+    // }
+    // slides.style.backgroundImage = `url('./img/slider/${slideIndex}.jpg')`;
   }, 2000);
 };
 
