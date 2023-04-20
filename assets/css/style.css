@@ -128,7 +128,7 @@ main section.slider .dot-container .dot.active {
 }
 @media (min-width: 992px) {
   main section.slider .dot-container .dot {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */
