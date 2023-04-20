@@ -12,52 +12,28 @@
 }
 
 main section.slider {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-image: url("../../img/slider/1.jpg");
-  background-position: center;
+  background-position: 48% 0;
   background-size: cover;
+  overflow: hidden;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  transition: background-image 1.5s ease;
+}
+@media (min-width: 768px) {
+  main section.slider {
+    background-position: center;
+  }
 }
 main section.slider .hidden {
   display: none;
 }
-@media (min-width: 768px) {
-  main section.slider {
-    height: 98vh;
-  }
-}
-main section.slider .box-img {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-main section.slider .box-img .slideShow {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-}
-main section.slider .box-img .slideShow .slideshow-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-main section.slider .box-img .slideShow .slideshow-container img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  -o-object-position: 48% 0;
-     object-position: 48% 0;
-}
-@media (min-width: 768px) {
-  main section.slider .box-img .slideShow .slideshow-container img {
-    -o-object-position: center;
-       object-position: center;
-  }
-}
-main section.slider .box-img .slideShow .slideshow-container .text {
+main section.slider .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,40 +48,34 @@ main section.slider .box-img .slideShow .slideshow-container .text {
   width: 100%;
   text-shadow: 1px 2px 2px #737879;
 }
-main section.slider .box-img .slideShow .slideshow-container .text h1 {
+main section.slider .text h1 {
   color: #fff;
   font-size: 3.5rem;
 }
 @media (min-width: 1920px) {
-  main section.slider .box-img .slideShow .slideshow-container .text h1 {
+  main section.slider .text h1 {
     font-size: 5rem;
   }
 }
-main section.slider .box-img .slideShow .slideshow-container .text span {
+main section.slider .text span {
   color: #ffc107;
 }
-main section.slider .box-img .slideShow .slideshow-container .text p {
+main section.slider .text p {
   padding: 0 3%;
   font-size: 1.2rem;
   font-weight: 300;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 }
 @media (min-width: 992px) {
-  main section.slider .box-img .slideShow .slideshow-container .text p {
+  main section.slider .text p {
     padding: 0 18%;
   }
 }
 @media (min-width: 1920px) {
-  main section.slider .box-img .slideShow .slideshow-container .text p {
+  main section.slider .text p {
     padding: 0 23%;
     font-size: 2rem;
   }
-}
-main section.slider .box-img .slideShow.fade {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
 }
 @-webkit-keyframes fade {
   from {
@@ -153,7 +123,12 @@ main section.slider .dot-container .dot.active {
 }
 @media (min-width: 768px) {
   main section.slider .dot-container .dot {
-    margin: 0 6.5%;
-    border: 1px solid #fff;
+    margin: 0 6%;
+  }
+}
+@media (min-width: 992px) {
+  main section.slider .dot-container .dot {
+    height: 4rem;
+    width: 4rem;
   }
 }/*# sourceMappingURL=style.css.map */
