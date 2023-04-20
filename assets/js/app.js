@@ -7,14 +7,16 @@ window.addEventListener("load", () => {
     "url(img/slider/5.jpg)",
     "url(img/slider/6.jpg)",
   ];
-  let slider = document.querySelector(".slider");
+  let slider = document.querySelector("section.slider");
   let buttons = slider.querySelectorAll("button");
   console.log(buttons);
-  //urls como arrays
   let currentIndex = 0;
   let sliderLength = imageArray.length;
+
   function changeBackground() {
-    slider.style.backgroundImage = imageArray[currentIndex];
+    slider.style.backgroundImage = imageArray[currentIndex]; //esto es para que cambie la imagen de fondo
+    // slider.style.transition = "all 1s ease-in-out";
+    // slider.classList.add("fade");
     if (
       currentIndex > 0 &&
       !buttons[currentIndex].classList.contains("white")
@@ -26,16 +28,16 @@ window.addEventListener("load", () => {
       }
     }
     buttons[currentIndex].classList.add("white");
-    // buttons[currentIndex].classList.add("white");
-    // buttonsList.children[currentIndex].classList.add("")
     currentIndex++;
 
     if (currentIndex == sliderLength) {
+      //esto es para que vuelva a empezar el ciclo cuando el indice sea igual a la longitud del array
       currentIndex = 0;
     }
-    // buttonsList.children[currentIndex].classList.add("")
   }
-  let id = setInterval(changeBackground, 1000);
+
+  let id = setInterval(changeBackground, 1000); //esto es para que se ejecute la funcion cada 1 segundo
+
   buttons.forEach((button, index, list) => {
     button.addEventListener("click", () => {
       list.forEach((element) => {
@@ -44,69 +46,11 @@ window.addEventListener("load", () => {
         }
       });
       button.classList.add("white");
-      slider.style.backgroundImage = imageArray[index];
-      clearInterval(id);
+      slider.style.backgroundImage = imageArray[index]; //esto es para que cambie la imagen de fondo cuando se hace click en los botones
+      clearInterval(id); //esto es para que se detenga el intervalo de automatizacion de la funcion
     });
   });
-  /*
-  let button1 = document.querySelector(".boton1");
-  button1.addEventListener("click", () => {
-    slider.style.backgroundImage = urlArray[0];
-    button1.classList.add("white");
-    button2.classList.remove("white");
-    button3.classList.remove("white");
-    button4.classList.remove("white");
-    button5.classList.remove("white");
-    button6.classList.remove("white");
-  });
-  let button2 = document.querySelector(".boton2");
-  button2.addEventListener("click", () => {
-    slider.style.backgroundImage = urlArray[1];
-    button2.classList.add("white");
-    button1.classList.remove("white");
-    button3.classList.remove("white");
-    button4.classList.remove("white");
-    button5.classList.remove("white");
-    button6.classList.remove("white");
-  });
-  let button3 = document.querySelector(".boton3");
-  button3.addEventListener("click", () => {
-    slider.style.backgroundImage = urlArray[2];
-    button3.classList.add("white");
-    button1.classList.remove("white");
-    button2.classList.remove("white");
-    button4.classList.remove("white");
-    button5.classList.remove("white");
-    button6.classList.remove("white");
-  });
-  let button4 = document.querySelector(".boton4");
-  button4.addEventListener("click", () => {
-    slider.style.backgroundImage = urlArray[3];
-    button4.classList.add("white");
-    button1.classList.remove("white");
-    button3.classList.remove("white");
-    button2.classList.remove("white");
-    button5.classList.remove("white");
-    button6.classList.remove("white");
-  });
-  let button5 = document.querySelector(".boton5");
-  button5.addEventListener("click", () => {
-    slider.style.backgroundImage = urlArray[4];
-    button5.classList.add("white");
-    button1.classList.remove("white");
-    button3.classList.remove("white");
-    button4.classList.remove("white");
-    button2.classList.remove("white");
-    button6.classList.remove("white");
-  });
-  let button6 = document.querySelector(".boton6");
-  button6.addEventListener("click", () => {
-    slider.style.backgroundImage = urlArray[5];
-    button6.classList.add("white");
-    button1.classList.remove("white");
-    button3.classList.remove("white");
-    button4.classList.remove("white");
-    button5.classList.remove("white");
-    button2.classList.remove("white");
-  });*/
+  // buttons.forEach((button, index, list) => {
+  //   setInterval(button.fireEvent("click", 1000));
+  // });
 });

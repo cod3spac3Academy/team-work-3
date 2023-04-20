@@ -1,15 +1,18 @@
 @import "../sass/reset";
 @import "../sass/variables";
+@import "../sass/animations";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Titillium+Web:wght@900&display=swap");
 
 section.slider {
-  // background-image: url(../../img/slider/1.jpg), url(../../img/slider/2.jpg),
-  //   url(../../img/slider/3.jpg), url(../../img/slider/4.jpg),
-  //   url(../../img/slider/5.jpg), url(../../img/slider/6.jpg);
+  width: 100vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  div#precarga{
+    display: none;
+  }
   div.sliderContainer {
     div.sliderText {
       display: flex;
@@ -40,18 +43,15 @@ section.slider {
         width: 90%;
       }
       div.sliderButtons {
+        width: 90%;
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translate(-50%);
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 2rem;
-        @media screen and (min-width: 992px) {
-          width: 80%;
-          justify-content: space-between;
-        }
         button {
           background-color: transparent;
           width: 30px;
@@ -70,6 +70,25 @@ section.slider {
   }
 }
 
+@media screen and (min-width: $breakpoint-small){
+  section.slider {
+    div.sliderContainer {
+      div.sliderText {
+        width: 100%;
+        h1.sliderH1 {
+          font-size: 2.7rem;
+        }
+        p.sliderP {
+          font-size: 0.9rem;
+        }
+        div.sliderButtons {
+          width: 90%;
+          justify-content: space-between;
+        }
+      }
+    }
+} }
+
 @media screen and (min-width: $breakpoint-medium) {
   section.slider {
     div.sliderContainer {
@@ -82,7 +101,7 @@ section.slider {
           font-size: 0.9rem;
         }
         div.sliderButtons {
-          width: 80%;
+          width: 90%;
           justify-content: space-between;
         }
       }
@@ -102,10 +121,22 @@ section.slider {
           font-size: 1.3rem;
         }
         div.sliderButtons {
-          width: 80%;
+          width: 90%;
           justify-content: space-between;
         }
       }
     }
   }
 }
+
+// .fade{
+//   animation: fade 1s ease-in-out;
+//   @keyframes fade {
+//     0% {
+//       opacity: 0;
+//     }
+//     100% {
+//       opacity: 1;
+//     }
+//   }
+// }
