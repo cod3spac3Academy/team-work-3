@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Titillium+Web:wght@900&display=swap");
+
 /* Reset */
 * {
   margin: 0;
@@ -7,151 +8,138 @@
   box-sizing: border-box;
 }
 
-:root {
-  font-size: 0.785rem;
-  --yellow: #ffc311;
-  --yellow-modal: #ffd969;
-  --gray: #767675;
-  --dark-gray: #282828;
+:root{
+    font-size: .785rem;
+    --yellow: #ffc311;
+    --yellow-hover: #ffd969;
+    --gray: #767675;
+    --dark-gray: #282828;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
 
 main section.team {
-  padding: 1em 1.5em;
+    padding: 1em 1.5em;
 }
+
 main section.team h2 {
-  font-family: "Titillium Web", sans-serif;
-  font-size: 3.5rem;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 3.5rem;
 }
+
 main section.team h2 span {
-  display: block;
-  color: var(--yellow);
-  margin-top: -0.4em;
+    display: block;
+    color: var(--yellow);
+    margin-top: -0.4em;
 }
+
 main section.team p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
-  color: var(--gray);
-  padding: 0.5em 1.5em 0 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--gray);
+    padding: 0.5em 1.5em 0 0;
 }
+
+main section.team .card {
+    margin-top: 2.3em;
+    margin-bottom: 4em;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 23px 0 rgba(0, 0, 0, 0.2);
+}
+
 main section.team .card img {
-  margin: 2.3em 0;
-  box-shadow: 0 15px 23px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
 }
-main section.team .card button {
-  font-family: "Titillium Web", sans-serif;
-  font-size: 1.7rem;
-  color: var(--dark-gray);
-  background-color: var(--yellow);
-  width: 8.2em;
-  padding: 0.6em 0;
-  position: absolute;
-  right: 5em;
-  bottom: 4.8em;
-  z-index: 1;
+
+main section.team .card span {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 1.7rem;
+    color: var(--dark-gray);
+    background-color: var(--yellow);
+    padding: 0.6em 2em;
+    position: absolute;
+    left: 25%;
+    top: 71%;
+    z-index: 1;
+    transition: all .3s ease-in;
 }
-main section.team .card .button2 {
-  bottom: -22.5em;
-}
-main section.team .card .button3 {
-  bottom: -50.5em;
-}
-main section.team .buttonDissable {
-  opacity: 0;
-}
-main section.team .hover {
-  transition: height 2s linear 1s;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 24.1em;
-  padding: 19.35em 12.25em;
-  z-index: 2;
-}
-main section.team .hover2 {
-  top: 71em;
-}
-main section.team .hover3 {
-  top: 117.9em;
-}
-main section.team .hover i {
-  color: white;
-  font-size: 3.5rem;
-}
-main section.team .hover i:hover {
-  color: var(--yellow-modal);
-}
-main section.team .dissable {
-  opacity: 0;
-}
-@media screen and (min-width: 768px) {
-  main section.team .players {
+
+main section.team .card .icon {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    font-size: 3rem;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  main section.team .players .card {
-    width: 30%;
-  }
-  main section.team .players .card img {
-    margin: 1em 0;
-  }
-  main section.team .players .card button {
-    font-size: 1.3rem;
-    top: 25.8em;
-    left: 4em;
-    padding: 0;
-    height: 3em;
-    width: 10em;
-  }
-  main section.team .players .card .button2 {
-    left: 20em;
-  }
-  main section.team .players .card .button3 {
-    left: 36em;
-  }
-  main section.team .players .card .hover {
-    top: 17.3em;
-    padding: 12.3em 7.6em;
-  }
-  main section.team .players .card .hover2 {
-    top: 17.3em;
-  }
-  main section.team .players .card .hover3 {
-    top: 17.3em;
-  }
+    justify-content: center;
+    align-items: center;
+    transition: all .3s ease-in;
 }
+
+main section.team .card .icon i {
+    color: white;
+}
+
+/* Hover effects */
+main section.team .card:hover span {
+    top: 100%;
+}
+
+main section.team .card:hover .icon {
+   height: 100%;
+   opacity: 1;
+}
+
+main section.team .card:hover i {
+    color: white;
+}
+
+main section.team .card:hover i:hover {
+    color: var(--yellow-hover);
+}
+
+@media screen and (min-width: 768px) {
+    main section.team .players {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    main section.team .players .card {
+        width: 30%;
+    }
+
+    main section.team .card span {
+        font-size: 1.4rem;
+        padding: 0.7em 2.5em;
+        left: 15%;
+    }
+
+    main section.team .card .icon {
+        font-size: 3rem;
+    }
+}
+
 @media screen and (min-width: 992px) {
-  main section.team .players .card button {
-    top: 35em;
-    left: 5em;
-    padding: 0;
-    width: 15em;
-  }
-  main section.team .players .card .button2 {
-    left: 29em;
-  }
-  main section.team .players .card .button3 {
-    left: 53em;
-  }
-  main section.team .players .card .hover {
-    top: 15.5em;
-    padding: 19.1em 12.09em;
-  }
-  main section.team .players .card .hover2 {
-    top: 15.5em;
-  }
-  main section.team .players .card .hover3 {
-    top: 15.5em;
-  }
+    main section.team {
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    main section.team .card span {
+        padding: 1em 6em;
+    }
+
+    main section.team .card .icon {
+        font-size: 5rem;
+    }
 }
-@media screen and (min-width: 1200px) {
-  main section.team main .team {
-    max-width: 1400px;
-  }
-}/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
