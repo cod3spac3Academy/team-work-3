@@ -19,11 +19,11 @@ window.addEventListener("scroll", () => {
 
 let menumv = document.querySelector(".menumv");
 let headerMv = document.querySelector(".headerMv");
-menumv.firstElementChild.addEventListener("click", () => {
-  menumv.classList.add("oculto");
-  headerMv.classList.remove("absoluteMode");
-  headerMv.lastElementChild.firstElementChild.addEventListener("click", () => {
-    menumv.classList.remove("oculto");
-    headerMv.classList.add("absoluteMode");
+headerMv.lastElementChild.firstElementChild.addEventListener("click", () => {
+  menumv.classList.remove("invisible");
+  headerMv.classList.add("absoluteMode");
+  menumv.firstElementChild.addEventListener("click", () => {
+    menumv.classList.add("invisible");
+    headerMv.classList.remove("absoluteMode");
   });
 });

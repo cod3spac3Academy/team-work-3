@@ -111,7 +111,7 @@
   .buttonsmv button:hover {
     color: rgb(47, 49, 49);
   }
-  .oculto {
+  .invisible {
     display: none;
   }
 }
@@ -144,7 +144,6 @@
     font-size: 1.2rem;
     font-weight: 700;
     color: white;
-    
   }
 }
 
@@ -173,7 +172,6 @@
     font-size: 1.4rem;
     font-weight: 700;
     color: white;
-    
   }
 }
 
@@ -202,7 +200,6 @@
     font-size: 1.9rem;
     font-weight: 700;
     color: white;
-    
   }
 }
 
@@ -314,10 +311,9 @@
   .hide {
     transform: translateY(-200px);
   }
-  .menumv{
+  .menumv {
     display: none;
     height: 0;
-
   }
 }
 
