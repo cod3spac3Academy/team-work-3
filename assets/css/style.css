@@ -18,7 +18,7 @@ main section.slider {
 }
 @media (min-width: 768px) {
   main section.slider {
-    height: 90vh;
+    height: 98vh;
   }
 }
 main section.slider .box-img {
@@ -46,6 +46,12 @@ main section.slider .box-img .slideShow .slideshow-container img {
   -o-object-position: 48% 0;
      object-position: 48% 0;
 }
+@media (min-width: 768px) {
+  main section.slider .box-img .slideShow .slideshow-container img {
+    -o-object-position: center;
+       object-position: center;
+  }
+}
 main section.slider .box-img .slideShow .slideshow-container .text {
   display: flex;
   flex-direction: column;
@@ -65,18 +71,29 @@ main section.slider .box-img .slideShow .slideshow-container .text h1 {
   color: #fff;
   font-size: 3.5rem;
 }
+@media (min-width: 1920px) {
+  main section.slider .box-img .slideShow .slideshow-container .text h1 {
+    font-size: 5rem;
+  }
+}
 main section.slider .box-img .slideShow .slideshow-container .text span {
   color: #ffc107;
 }
 main section.slider .box-img .slideShow .slideshow-container .text p {
-  padding: 0 1rem;
+  padding: 0 3%;
   font-size: 1.2rem;
   font-weight: 300;
   font-family: "Poppins";
 }
-@media (min-width: 1024px) {
-  main section.slider .box-img .slideShow .slideshow-container .text {
-    padding: 0 20%;
+@media (min-width: 992px) {
+  main section.slider .box-img .slideShow .slideshow-container .text p {
+    padding: 0 18%;
+  }
+}
+@media (min-width: 1920px) {
+  main section.slider .box-img .slideShow .slideshow-container .text p {
+    padding: 0 23%;
+    font-size: 2rem;
   }
 }
 main section.slider .box-img .slideShow.fade {
