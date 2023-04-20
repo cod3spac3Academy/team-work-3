@@ -41,19 +41,19 @@
   margin-left: 1rem;
 
 }
-h2{
+.games h2{
   font-family: "Titillium Web", sans-serif;
   font-weight:900;
   font-size: 2.5rem;
   margin-left: 1rem;
   
 }
-span {
+.games span {
   color: #ffc311;
   font-weight: 900;
   font-family: "Titillium Web", sans-serif;
 }
- p {
+ .games p {
   margin: 1rem;
   font-size: .9rem;
   font-family: "Poppins", sans-serif;
