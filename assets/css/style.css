@@ -6,17 +6,9 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  outline: 0;
 }
 /* reset de imagenes */
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-}
 /* Propiedades Globales */
 section.games {
   margin: 1.2em;
@@ -25,6 +17,15 @@ section.games {
   color: rgb(129, 128, 128);
 }
 
+section.games img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
 /* Propiedades h2 (texto our games) */
 section.games h2 {
   font-family: "Titillium Web", sans-serif;
@@ -50,7 +51,7 @@ section.games div.cards {
   width: 100%;
   box-shadow: 0px 0px 15px #cacaca;
   background: #fff;
-  margin: 0 0 4em;
+  margin: 0 0 3em;
 }
 /* texto de cada card */
 section.games div.text-cards {
@@ -75,12 +76,29 @@ section.games div.links span {
   font-size: 0.7rem;
 }
 /* Hover de los textos y enlaces */
-section.games div.cards h3:hover {
+section.games div.cards h3:hover,
+section.games div.cards span:hover,
+section.games div.links i:hover {
   color: rgb(255, 195, 17);
 }
-section.games div.cards span:hover {
+/* Estilos del footer */
+footer {
+  background-color: black;
+  padding: 1.8em;
+  color: white;
+  text-align: center;
+  line-height: 1.9rem;
+  font-size: 1rem;
+}
+footer h2 {
+  font-family: "Titillium Web", sans-serif;
+}
+/* para las letras amarillas tanto span como enlace */
+footer span,
+a {
   color: rgb(255, 195, 17);
 }
+
 /* breakpoin para tablet */
 @media screen and (min-width: 768px) {
   section.games div.cards {
@@ -89,5 +107,11 @@ section.games div.cards span:hover {
   }
   section.games div.text {
     margin-bottom: 1em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  section.games {
+    max-width: 1140px;
+    margin: auto;
   }
 }
