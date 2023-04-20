@@ -128,28 +128,120 @@
   height: 20rem;
   opacity: 100%;
 }
+/* @media (min-width: 1025px){
+  .player-card img{
+    object-fit:cover;
+    
+  }
+  .player-card{
 
-@media screen and (max-width:390px){
+    padding: none;
+    height: 0rem;
+
+  }
+  .team p{
+    margin-top: 2rem;
+
+    max-width: 0em;
+    font-size: 3em;
+
+  }
+  .the-cards{
+    width: 100%;
+    height: 100%;
+
+    padding: none;
+  }
+} */
+
+@media  (max-width:390px){
+  .icono{
+    height: 10em;
+    width: 15em;
+  }
   .team{
     justify-content: center;
     flex-direction: column;
-    /* margin-left: 1rem;
-    margin-right: 1rem; */
+
   }
+  .team-title{
+    font-size: 2.7em;
+    padding-left: 1.3rem;
+    padding-right: 1rem;
+    padding-bottom: 0.2em;
+
+
+  }
+  .player-card img{
+    height: 31em;
+  }
+  .player-card h2{
+    font-size: 1em;
+  }
+}
+  @media  (max-width:390px){
+    .icono{
+      height: 10em;
+      width: 15em;
+    }
+    .team{
+      justify-content: center;
+      flex-direction: column;
+
+    }
+    .team-title{
+      font-size: 2.7em;
+      padding-left: 1.3rem;
+      padding-right: 1rem;
+      padding-bottom: 0.2em;
+    }
+  
+  .span-team{
+    line-height: 0.9em;
+
+    font-size: 2.7em;
+    padding-left: 0.4em;
+  }
+
   .team p{
     margin:auto;
     margin-top: 2rem;
-    padding-left: 5em;
+    padding-left: 2em;
+    max-width: 40em;
+    font-size: small;
+    padding-right: 2em;
+    margin-bottom: none;
+    padding-bottom: none;
+  }
+
+}
+
+@media  (max-width:768px){
+  .team{
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .team p{
+    margin:auto;
+    margin-top: 1rem;
+    padding-left: 2em;
+    font-size: 1rem;
+    max-width: 60em;
+    padding-right: 2em;
   }
   .player-card img{
-    max-width: 80vw;
+    height: 20em;
   flex-direction: column;
-justify-content: center;}
+  justify-content: center;
+}
     .player-card h2{
       line-height: 0.9;
-      max-width: 70vw;
+      /* max-width: 70vw; */
       justify-content: center;
       display: flex;
+      font-size: 2em;
     }
   .team-title{
     padding-left: 1rem;
@@ -159,5 +251,14 @@ justify-content: center;}
     line-height: 0.9em;
     padding-left: 1.2rem; 
     margin-bottom: 2rem; 
+  }
+  .icono {
+    position: absolute;
+    top: 60%;
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    height: 10rem;
+    opacity: 100%;
   }
 }
