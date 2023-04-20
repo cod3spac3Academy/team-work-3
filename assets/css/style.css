@@ -9,14 +9,15 @@
 }
 
 /* Small devices (landscape phones, 576px and up)  */
-@media (min-width: 389px) {
+
+@media (min-width: 200px) {
   .one {
     height: 0;
     display: none;
   }
   /* aqui el header de movil headerTwo */
+
   .headerMv {
-    position: relative;
     z-index: 1;
     max-width: 100vw;
     display: flex;
@@ -27,8 +28,14 @@
     font-family: titillium web;
     padding-right: 3.8em;
   }
+  .headerMv {
+    position: relative;
+  }
+  .absoluteMode {
+    position: absolute;
+  }
 
-  .mv h2 .yellow {
+  .headerMv h2 .yellow {
     color: gold;
   }
   .headerMv img {
@@ -96,7 +103,7 @@
   .buttonsmv button {
     padding: 1em 2.3em;
     background-color: gold;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
     color: white;
     font-weight: 700;
@@ -109,45 +116,93 @@
   }
 }
 @media (min-width: 460px) {
-  .mv img {
+  .headerMv img {
     max-width: 10vw;
     padding: 0.9em;
   }
-  .mv h2 {
+  .headerMv h2 {
     font-size: 2rem;
   }
-  .mv {
+  .headerMv {
     padding-right: 4.5em;
+  }
+  .menumv img {
+    max-width: 8vw;
+  }
+  .menumv {
+    font-size: 1rem;
+  }
+  .menumv img {
+    max-width: 8vw;
+  }
+  .menumv {
+    font-size: 1.2rem;
+  }
+  .buttonsmv button {
+    padding: 1em 2.3em;
+    background-color: gold;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    
   }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  .mv img {
+  .headerMv img {
     max-width: 9vw;
     padding: 1em;
   }
-  .mv {
+  .headerMv {
     padding: 1.9em;
     padding-right: 6em;
   }
-  .mv h2 {
+  .headerMv h2 {
     font-size: 2.5rem;
+  }
+  .menumv img {
+    max-width: 7.4vw;
+  }
+  .menumv {
+    font-size: 1.6rem;
+  }
+  .buttonsmv button {
+    padding: 1em 2.3em;
+    background-color: gold;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    
   }
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .mv img {
+  .headerMv img {
     max-width: 9vw;
     padding: 1.4em;
   }
-  .mv {
+  .headerMv {
     padding: 2.5em;
     padding-right: 7em;
   }
-  .mv h2 {
+  .headerMv h2 {
     font-size: 2.8rem;
+  }
+  .menumv img {
+    max-width: 7.4vw;
+  }
+  .menumv {
+    font-size: 2rem;
+  }
+  .buttonsmv button {
+    padding: 1em 2.3em;
+    background-color: gold;
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: white;
+    
   }
 }
 
@@ -258,6 +313,11 @@
   }
   .hide {
     transform: translateY(-200px);
+  }
+  .menumv{
+    display: none;
+    height: 0;
+
   }
 }
 
