@@ -125,7 +125,7 @@
   display: flex;
   justify-content: center;
   width: 33.5rem;
-  height: 50rem;
+  height: 20rem;
   opacity: 100%;
 }
 
@@ -133,8 +133,13 @@
   .team{
     justify-content: center;
     flex-direction: column;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    /* margin-left: 1rem;
+    margin-right: 1rem; */
+  }
+  .team p{
+    margin:auto;
+    margin-top: 2rem;
+    padding-left: 5em;
   }
   .player-card img{
     max-width: 80vw;
