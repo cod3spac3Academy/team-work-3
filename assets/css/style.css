@@ -12,11 +12,10 @@
 }
 
 main section.slider {
-  position: relative;
   width: 100vw;
   height: 100vh;
   background-image: url("../../img/slider/1.jpg");
-  position: center;
+  background-position: center;
   background-size: cover;
 }
 main section.slider .hidden {
