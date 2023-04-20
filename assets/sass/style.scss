@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Titillium+Web:wght@900&display=swap");
 
-<<<<<<< HEAD
 :root{
     $font-size: .785rem;
 }
@@ -9,40 +8,10 @@ main section.team {
     padding: 1em 1.5em;
 
     h2 {
-=======
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  font-size: 0.785rem;
-  --yellow: #ffc311;
-  --yellow-modal: #ffd969;
-  --gray: #767675;
-  --dark-gray: #282828;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-main {
-  section {
-    &.team {
-      padding: 1em 1.5em;
-
-      h2 {
->>>>>>> 3c8878469f2c6a328840930395ab4e723316977b
         font-family: "Titillium Web", sans-serif;
         font-size: 3.5rem;
 
         span {
-<<<<<<< HEAD
             display: block;
             color: #ffc311;
             margin-top: -0.4em;
@@ -159,119 +128,4 @@ main {
             font-size: 5rem;
         }
     }
-=======
-          display: block;
-          color: var(--yellow);
-          margin-top: -0.4em;
-        }
-      }
-
-      p {
-        font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-size: 1.2rem;
-        color: var(--gray);
-        padding: 0.5em 1.5em 0 0;
-      }
-
-      .card {
-        position: relative;
-
-        img {
-          margin: 2.3em 0;
-          box-shadow: 0 15px 23px 0 rgba(0, 0, 0, 0.2);
-        }
-
-        span {
-          font-family: "Titillium Web", sans-serif;
-          font-size: 1.7rem;
-          color: var(--dark-gray);
-          background-color: var(--yellow);
-          padding: 0.6em 2em;
-          position: absolute;
-          left: 25%;
-          bottom: 23.5%;
-          z-index: 1;
-        }
-
-        .icon {
-          z-index: 2;
-          position: absolute;
-          top: 50%;
-          left: 47%;
-          opacity: 0;
-          font-size: 3rem;
-        }
-
-        &:hover {
-          img {
-            filter: brightness(0.5);
-          }
-
-          span {
-            opacity: 0;
-          }
-
-          .icon {
-            opacity: 1;
-
-            i {
-              color: white;
-
-              &:hover {
-                color: var(--yellow-modal);
-              }
-            }
-          }
-        }
-      }
-
-      @media screen and (min-width: 768px) {
-        .players {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-        }
-
-        .players .card {
-          width: 30%;
-        }
-
-        .card span {
-          font-size: 1.4rem;
-          padding: 0.7em 2.5em;
-          position: absolute;
-          left: 15%;
-          bottom: 31%;
-          z-index: 1;
-        }
-
-        .card .icon {
-          z-index: 2;
-          position: absolute;
-          top: 44%;
-          left: 44%;
-          opacity: 0;
-          font-size: 3rem;
-        }
-      }
-
-      @media screen and (min-width: 992px) {
-        max-width: 1400px;
-        margin: auto;
-
-        .card span {
-          padding: 1em 6em;
-          left: 16%;
-          bottom: 20%;
-        }
-
-        .card .icon {
-          top: 48%;
-          font-size: 5rem;
-        }
-      }
-    }
-  }
->>>>>>> 3c8878469f2c6a328840930395ab4e723316977b
 }
