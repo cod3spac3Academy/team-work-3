@@ -7,14 +7,16 @@ window.addEventListener("load", () => {
         let dissable = dissables[index];
         let button = buttons[index];
 
+        button.classList.remove("buttonDissable");
+        
         player.addEventListener("mouseover", () => {
-        dissable.classList.remove("dissable");
-        button.classList.add("buttonDissable");
+            dissable.classList.remove("dissable");
+            button.classList.add("buttonDissable");
         });
 
         player.addEventListener("mouseout", () => {
-        dissable.classList.add("dissable");
-        button.classList.remove("buttonDissable");
+            dissable.classList.add("dissable");
+            button.classList.remove("buttonDissable");
         });
     });
 });

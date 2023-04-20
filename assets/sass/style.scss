@@ -48,6 +48,10 @@ main {
       position: relative;
     }
 
+    // .card img:hover {
+    //   filter: brightness(1);
+    // }
+
     .card button {
       font-family: "Titillium Web", sans-serif;
       font-size: 1.7rem;
@@ -74,9 +78,8 @@ main {
     }
 
     .hover {
-      transition: height 2s linear 1s;
+      // transition: height 2s linear 1s;
       background-color: rgba(0, 0, 0, 0.5);
-      // filter: brightness(0.5);
       position: absolute;
       top: 24.1em;
       padding: 19.35em 12.25em;
@@ -101,7 +104,7 @@ main {
     }
 
     .dissable {
-      opacity: 0;
+      opacity: 1;
     }
 
     @media screen and (min-width: 768px) {
@@ -189,6 +192,37 @@ main {
     @media screen and (min-width: 1200px) {
       main .team {
         max-width: 1400px;
+      }
+      .players {
+        .card {
+          button {
+            top: 35em;
+            left: 5em;
+            padding: 0;
+            width: 15em;
+          }
+
+          .button2 {
+            left: 29em;
+          }
+    
+          .button3 {
+            left: 53em;
+          }
+    
+          .hover {
+            top: 15.5em;
+            padding: 19.1em 12.09em;
+          }
+    
+          .hover2 {
+            top: 15.5em;
+          }
+      
+          .hover3 {
+            top: 15.5em;
+          }
+        }
       }
     }
   }
