@@ -25,9 +25,10 @@ section.games div.Title h1 {
 section.games div.Title h1 span {
   color: #ffc824;
 }
-section.games div.Title p {
+section.games div p {
   font-family: "Poppins";
-  color: rgb(119, 117, 113);
+  color: #777;
+  font-weight: 300;
 }
 /* cards de los juegos con su descripcion  */
 section.games div.newGames {
@@ -62,7 +63,6 @@ section.games div.newGames div.gameTitle p {
 section.games div.newGames div.gameTitle p.description {
   font-family: "Poppins";
   font-size: 1rem;
-  color: rgb(119, 117, 113);
 }
 div.gameTitle p.enlace i {
   color: black;
@@ -73,35 +73,36 @@ div.gameTitle p.enlace a {
   color: rgb(119, 117, 113);
 }
 /* hacemos hover al h3 y al enlace */
-.newGames:hover h3,
-.newGames:hover a,
-.newGames:hover .enlace a {
-  color: #ffc824;
+.newGames h3:hover,
+.newGames p.enlace > i:hover,
+.newGames p.enlace > a:hover {
+  color: #ffc824 !important;
 }
-div.gameTitle p.enlace a:hover {
+/* div.gameTitle p.enlace a:hover {
   color: rgb(232, 85, 32);
-}
+} */
 /* Empieza el footer */
-div.footer {
+footer {
   background-color: black;
   color: aliceblue;
   text-align: center;
-  padding: 8%;
+  padding: 1em 1em;
+  font-family: "Poppins", sans-serif;
 }
-div.footer h3.headerFooter {
+footer h3.headerFooter {
   font-family: "titillium Web", sans-serif;
   font-weight: 900;
   font-size: 1.4rem;
 }
 /* Color a los enlaces y al texto  */
-div.footer h3.headerFooter span {
+footer h3.headerFooter span {
   color: #ffc824;
 }
-div.footer a {
+footer a {
   color: #ffc824;
 }
 /* Icono y transformacion */
-div.footer:hover .iconoFooter i {
+footer:hover .iconoFooter i {
   animation: icono-animacion 2s infinite;
 }
 
@@ -148,9 +149,7 @@ div.footer:hover .iconoFooter i {
   section.games div.newGames div.gameTitle p.description {
     padding: 0%;
   }
-  div.footer {
-    padding: 2.5%;
-  }
+  
 
   /* cambiamos el tamaño de la fuente  */
   section.games div.newGames div.gameTitle h3 {
@@ -185,15 +184,14 @@ div.footer:hover .iconoFooter i {
   section.games div.Title {
     margin: 0% 2%;
   }
-
-  div.footer {
-    padding: 1%;
-  }
 }
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   section.games {
     max-width: 1140px;
+  }
+  footer{
+    padding-bottom: 1.5em;
   }
 }
 /* XX-Large devices (larger desktops, 1400px and up) */
