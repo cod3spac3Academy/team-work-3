@@ -15,8 +15,10 @@ window.addEventListener("load", () => {
 
   function changeBackground() {
     slider.style.backgroundImage = imageArray[currentIndex]; //esto es para que cambie la imagen de fondo
-    // slider.style.transition = "all 1s ease-in-out";
-    // slider.classList.add("fade");
+    slider.classList.add("fadeIn");
+    setTimeout(() => {
+      slider.classList.remove("fadeIn");
+    }, 500);
     if (
       currentIndex > 0 &&
       !buttons[currentIndex].classList.contains("white")
@@ -40,6 +42,10 @@ window.addEventListener("load", () => {
 
   buttons.forEach((button, index, list) => {
     button.addEventListener("click", () => {
+      slider.classList.add("fadeIn");
+      setTimeout(() => {
+        slider.classList.remove("fadeIn");
+      }, 500);
       list.forEach((element) => {
         if (element.classList.contains("white")) {
           element.classList.remove("white");

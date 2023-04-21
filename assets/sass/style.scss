@@ -9,11 +9,12 @@ section.slider {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-image 1s ease-in-out;
+  // transition: background-image 1s ease-in-out;
   div#precarga{
     display: none;
   }
   div.sliderContainer {
+    // transition: animation 1s ease-in-out;
     div.sliderText {
       display: flex;
       flex-direction: column;
@@ -39,6 +40,7 @@ section.slider {
         line-height: inherit;
         font-family: "Poppins", sans-serif;
         font-size: 0.8rem;
+        font-weight: 600;
         color: white;
         width: 90%;
       }
@@ -69,6 +71,9 @@ section.slider {
     }
   }
 }
+.fadeIn{
+  animation: fadeIn .3s ease-in-out;
+}
 
 @media screen and (min-width: $breakpoint-small){
   section.slider {
@@ -76,10 +81,10 @@ section.slider {
       div.sliderText {
         width: 100%;
         h1.sliderH1 {
-          font-size: 2.7rem;
+          font-size: 2.8rem;
         }
         p.sliderP {
-          font-size: 0.9rem;
+          font-size: 1rem;
         }
         div.sliderButtons {
           width: 90%;
@@ -95,7 +100,7 @@ section.slider {
       div.sliderText {
         width: 100%;
         h1.sliderH1 {
-          font-size: 3rem;
+          font-size: 3.2rem;
         }
         p.sliderP {
           font-size: 0.9rem;
@@ -121,7 +126,7 @@ section.slider {
           font-size: 1.3rem;
         }
         div.sliderButtons {
-          width: 90%;
+          width: 85%;
           justify-content: space-between;
         }
       }
