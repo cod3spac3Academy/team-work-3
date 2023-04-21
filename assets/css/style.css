@@ -1,11 +1,139 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Titillium+Web:wght@900&display=swap");
-
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  outline: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+section.slider {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.slider div#precarga {
+  display: none;
+}
+section.slider div.sliderContainer div.sliderText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  width: 90%;
+}
+section.slider div.sliderContainer div.sliderText h1.sliderH1 {
+  text-align: center;
+  line-height: inherit;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 0 0 2px #ffc824;
+}
+section.slider div.sliderContainer div.sliderText h1.sliderH1 span.sliderYellow {
+  color: #ffc107;
+  text-shadow: 0 0 5px rgb(97, 97, 97);
+}
+section.slider div.sliderContainer div.sliderText p.sliderP {
+  text-align: center;
+  line-height: inherit;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  width: 90%;
+}
+section.slider div.sliderContainer div.sliderText div.sliderButtons {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+section.slider div.sliderContainer div.sliderText div.sliderButtons button {
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  margin: 0 0.8rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 3rem;
+  cursor: pointer;
+}
+section.slider div.sliderContainer div.sliderText div.sliderButtons button.white {
+  background-color: white;
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 380px) {
+  section.slider div.sliderContainer div.sliderText {
+    width: 100%;
+  }
+  section.slider div.sliderContainer div.sliderText h1.sliderH1 {
+    font-size: 2.8rem;
+  }
+  section.slider div.sliderContainer div.sliderText p.sliderP {
+    font-size: 1rem;
+  }
+  section.slider div.sliderContainer div.sliderText div.sliderButtons {
+    width: 90%;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  section.slider div.sliderContainer div.sliderText {
+    width: 100%;
+  }
+  section.slider div.sliderContainer div.sliderText h1.sliderH1 {
+    font-size: 3.2rem;
+  }
+  section.slider div.sliderContainer div.sliderText p.sliderP {
+    font-size: 0.9rem;
+  }
+  section.slider div.sliderContainer div.sliderText div.sliderButtons {
+    width: 90%;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.slider div.sliderContainer div.sliderText {
+    width: 70%;
+  }
+  section.slider div.sliderContainer div.sliderText h1.sliderH1 {
+    font-size: 3rem;
+  }
+  section.slider div.sliderContainer div.sliderText p.sliderP {
+    font-size: 1.3rem;
+  }
+  section.slider div.sliderContainer div.sliderText div.sliderButtons {
+    width: 85%;
+    justify-content: space-between;
+  }
 }
 /* juanmi time ----> */
 /* empieza la secion de juegos */
@@ -200,3 +328,5 @@ footer:hover .iconoFooter i {
     max-width: 1140px;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
