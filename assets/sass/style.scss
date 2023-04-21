@@ -1,0 +1,147 @@
+@import "../sass/reset";
+@import "../sass/variables";
+@import "../sass/animations";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Titillium+Web:wght@900&display=swap");
+
+section.slider {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // transition: background-image 1s ease-in-out;
+  div#precarga{
+    display: none;
+  }
+  div.sliderContainer {
+    // transition: animation 1s ease-in-out;
+    div.sliderText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      height: 100vh;
+      width: 90%;
+      h1.sliderH1 {
+        text-align: center;
+        line-height: inherit;
+        font-family: "Titillium Web", sans-serif;
+        font-size: 2.5rem;
+        color: white;
+        text-shadow: 0 0 2px #ffc824;
+        span.sliderYellow {
+          color: #ffc107;
+          text-shadow: 0 0 5px rgb(97, 97, 97);
+        }
+      }
+      p.sliderP {
+        text-align: center;
+        line-height: inherit;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: white;
+        width: 90%;
+      }
+      div.sliderButtons {
+        width: 90%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 2rem;
+        button {
+          background-color: transparent;
+          width: 30px;
+          height: 30px;
+          margin: 0 0.8rem;
+          border: 2px solid white;
+          border-radius: 50%;
+          font-size: 3rem;
+          cursor: pointer;
+        }
+        button.white{
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+.fadeIn{
+  animation: fadeIn .3s ease-in-out;
+}
+
+@media screen and (min-width: $breakpoint-small){
+  section.slider {
+    div.sliderContainer {
+      div.sliderText {
+        width: 100%;
+        h1.sliderH1 {
+          font-size: 2.8rem;
+        }
+        p.sliderP {
+          font-size: 1rem;
+        }
+        div.sliderButtons {
+          width: 90%;
+          justify-content: space-between;
+        }
+      }
+    }
+} }
+
+@media screen and (min-width: $breakpoint-medium) {
+  section.slider {
+    div.sliderContainer {
+      div.sliderText {
+        width: 100%;
+        h1.sliderH1 {
+          font-size: 3.2rem;
+        }
+        p.sliderP {
+          font-size: 0.9rem;
+        }
+        div.sliderButtons {
+          width: 90%;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-large) {
+  section.slider {
+    div.sliderContainer {
+      div.sliderText {
+        width: 70%;
+        h1.sliderH1 {
+          font-size: 3rem;
+        }
+        p.sliderP {
+          font-size: 1.3rem;
+        }
+        div.sliderButtons {
+          width: 85%;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+// .fade{
+//   animation: fade 1s ease-in-out;
+//   @keyframes fade {
+//     0% {
+//       opacity: 0;
+//     }
+//     100% {
+//       opacity: 1;
+//     }
+//   }
+// }
