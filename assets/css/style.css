@@ -101,7 +101,8 @@ main section.team .card:hover i {
     color: white;
 }
 
-main section.team .card:hover i:hover {
+main section.team .card:hover i:hover,
+main section.team .card:hover i:active {
     color: var(--yellow-hover);
 }
 
@@ -129,7 +130,6 @@ main section.team .card:hover i:hover {
 
 @media screen and (min-width: 992px) {
     main section.team {
-        max-width: 1400px;
         margin: auto;
     }
 
@@ -139,6 +139,13 @@ main section.team .card:hover i:hover {
 
     main section.team .card .icon {
         font-size: 5rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main section.team {
+        max-width: 1140px;
+        margin: auto;
     }
 }
 
