@@ -7,3 +7,330 @@
   border: 0;
   box-sizing: border-box;
 }
+@media (min-width: 200px) {
+  .HackTGame {
+    position: absolute;
+    align-items: center;
+    z-index: 1;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1.3em;
+    color: black;
+    font-family: titillium web;
+  }
+  header .HackTGame .yellow {
+    color: gold;
+  }
+  header .HackTGame img {
+    max-width: 11vw;
+    position: relative;
+    margin-left: auto;
+    padding: 0.8em;
+    border-radius: 5px;
+    background-color: black;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    color: white;
+    background-color: rgb(47, 49, 49);
+    margin-left: 6em;
+    height: 100vh;
+    font-family: Poppins;
+    font-size: 0.9rem;
+    transition: 1s;
+  }
+  header nav .options {
+    text-align: left;
+    flex-direction: column;
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+  header nav li a {
+    text-decoration: none;
+    color: white;
+  }
+  header nav li {
+    list-style: none;
+    border-bottom: 1px solid white;
+    padding-top: 2.7em;
+  }
+
+  header nav .icons {
+    display: flex;
+    flex-direction: row;
+    padding: 2.5em;
+    justify-content: space-evenly;
+  }
+  header nav .close {
+    background-color: rgb(32, 144, 144);
+    margin-top: 1em;
+    display: flex;
+    justify-content: right;
+  }
+  header nav img {
+    max-width: 9vw;
+    position: absolute;
+    padding: 0.4em;
+    border-radius: 5px;
+    margin-top: 0.7em;
+    margin-right: 1em;
+  }
+  header nav .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav .buttons button {
+    padding: 1em 2.3em;
+    background-color: gold;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    font-weight: 700;
+  }
+  header nav .buttons button:hover {
+    color: rgb(47, 49, 49);
+  }
+  .invisible {
+    transform: translateX(800px);
+  }
+}
+
+@media (min-width: 460px) {
+  .HackTGame {
+    font-size: 1.5em;
+  }
+
+  header nav .buttons button {
+    padding: 1em 3em;
+    font-size: 1.1rem;
+  }
+  header nav {
+    margin-left: 8em;
+  }
+}
+
+@media (min-width: 576px) {
+  .HackTGame {
+    font-size: 1.7em;
+    padding: 1em;
+  }
+
+  header nav .buttons button {
+    padding: 1em 3.2em;
+    font-size: 1.1rem;
+  }
+  header nav {
+    margin-left: 10em;
+    font-size: 1.1rem;
+  }
+  header nav img {
+    max-width: 7vw;
+  }
+}
+
+@media (min-width: 768px) {
+  header nav .buttons button {
+    padding: 1em 3.8em;
+    font-size: 1.2rem;
+  }
+  header nav {
+    margin-left: 15em;
+    font-size: 1.3rem;
+  }
+  header nav img {
+    max-width: 6.9vw;
+  }
+}
+
+@media (min-width: 992px) {
+  #iconsId {
+    order: 1;
+  }
+  #buttonsId {
+    order: 2;
+  }
+  #optionsId {
+    order: 3;
+  }
+  .hide {
+    transform: translateY(-200px);
+  }
+
+  header {
+    height: 10vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100vw;
+    font-family: Poppins;
+    transition: 3s;
+  }
+  header .HackTGame {
+    margin-top: 1.2em;
+    font-size: 1rem;
+    margin-left: 2em;
+    font-family: Titillium Web;
+    font-weight: 900;
+    color: white;
+    background-color: transparent;
+  }
+  header .HackTGame .yellow {
+    color: gold;
+  }
+  header .HackTGame img {
+    display: none;
+  }
+  header nav img {
+    display: none;
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    max-height: 10vh;
+    margin-left: auto;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+    margin-right: 2em;
+    color: white;
+    background-color: transparent;
+
+    font-size: 1rem;
+  }
+  header nav .icons {
+    display: flex;
+    padding: 1em;
+    justify-content: space-evenly;
+    /* background-color: bisque; */
+    width: 50%;
+    align-items: center;
+  }
+  header nav .icons .fa-brands {
+    color: white;
+    padding: 1 em;
+    /* background-color: aqua; */
+    font-size: 1rem;
+  }
+  header nav .icons .fa-brands:hover {
+    color: gold;
+  }
+  header nav .options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+    /* margin-right: 2em; */
+    padding-top: none;
+    width: 100%;
+  }
+  header nav .options ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+    font-size: 0.9rem;
+    font-weight: 400;
+    list-style: none;
+    align-content: center;
+  }
+  header nav .options li a {
+    color: white;
+    text-decoration: none;
+  }
+  header nav li {
+    list-style: none;
+    border-bottom: none;
+    padding-top: 0;
+  }
+  header nav .options li a:hover {
+    color: gold;
+  }
+  header nav .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  header nav .buttons button {
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 0.8em 2.2em;
+    background-color: gold;
+    color: white;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+  }
+  nav .buttons button:hover {
+    color: black;
+  }
+  header nav .buttons :first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 2.7em;
+  }
+  header nav .buttons :last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    /* border-left: 0.2px solid rgb(191, 189, 189); */
+    padding-left: 2.5em;
+    /* margin-right: 1.5em; */
+  }
+  .invisible {
+    transform: none;
+  }
+}
+@media (min-width: 1200px) {
+  header nav .options ul {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  header .HackTGame {
+    font-size: 1.3rem;
+    align-self: center;
+  }
+  header nav .icons .fa-brands {
+    font-size: 1.3rem;
+  }
+  header nav .buttons button {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  header nav .options ul {
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
+  header .HackTGame {
+    font-size: 1.7rem;
+  }
+  header nav .icons .fa-brands {
+    font-size: 1.5rem;
+  }
+  header nav .buttons button {
+    font-size: 1.1rem;
+    font-weight: 900;
+  }
+  header nav .buttons :first-child {
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+    padding-left: 2.3em;
+  }
+  header nav .buttons :last-child {
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    padding-left: 2em;
+  }
+}
+
+
