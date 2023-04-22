@@ -7,46 +7,31 @@
   border: 0;
   box-sizing: border-box;
 }
-
-/* Small devices (landscape phones, 576px and up)  */
-
 @media (min-width: 200px) {
-  .one {
-    height: 0;
-    display: none;
-  }
-  /* aqui el header de movil headerTwo */
-
-  .headerMv {
+  .HackTGame {
+    position: absolute;
+    align-items: center;
     z-index: 1;
-    max-width: 100vw;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     background-color: white;
     padding: 1.3em;
     color: black;
     font-family: titillium web;
-    padding-right: 3.8em;
   }
-  .headerMv {
-    position: relative;
-  }
-  .absoluteMode {
-    position: absolute;
-  }
-
-  .headerMv h2 .yellow {
+  header .HackTGame .yellow {
     color: gold;
   }
-  .headerMv img {
+  header .HackTGame img {
     max-width: 11vw;
-    background-color: blue;
+    position: relative;
     margin-left: auto;
     padding: 0.8em;
     border-radius: 5px;
     background-color: black;
   }
-  .menumv {
+  header nav {
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -57,50 +42,50 @@
     height: 100vh;
     font-family: Poppins;
     font-size: 0.9rem;
+    transition: 1s;
   }
-  .menunav {
+  header nav .options {
     text-align: left;
     flex-direction: column;
-    /* margin-top: 2em; */
     margin-right: 1em;
     margin-left: 1em;
   }
-
-  .menumv li a {
+  header nav li a {
     text-decoration: none;
     color: white;
   }
-  .menumv li {
+  header nav li {
     list-style: none;
     border-bottom: 1px solid white;
     padding-top: 2.7em;
   }
-  .iconsmv {
+
+  header nav .icons {
     display: flex;
     flex-direction: row;
     padding: 2.5em;
     justify-content: space-evenly;
   }
-  .close {
+  header nav .close {
     background-color: rgb(32, 144, 144);
-    /* height: 1em; */
     margin-top: 1em;
     display: flex;
     justify-content: right;
   }
-  .menumv img {
+  header nav img {
     max-width: 9vw;
+    position: absolute;
     padding: 0.4em;
     border-radius: 5px;
     margin-top: 0.7em;
     margin-right: 1em;
   }
-  .buttonsmv {
+  header nav .buttons {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .buttonsmv button {
+  header nav .buttons button {
     padding: 1em 2.3em;
     background-color: gold;
     font-size: 1.1rem;
@@ -108,140 +93,118 @@
     color: white;
     font-weight: 700;
   }
-  .buttonsmv button:hover {
+  header nav .buttons button:hover {
     color: rgb(47, 49, 49);
   }
   .invisible {
-    display: none;
-  }
-}
-@media (min-width: 460px) {
-  .headerMv img {
-    max-width: 10vw;
-    padding: 0.9em;
-  }
-  .headerMv h2 {
-    font-size: 2rem;
-  }
-  .headerMv {
-    padding-right: 4.5em;
-  }
-  .menumv img {
-    max-width: 8vw;
-  }
-  .menumv {
-    font-size: 1rem;
-  }
-  .menumv img {
-    max-width: 8vw;
-  }
-  .menumv {
-    font-size: 1.2rem;
-  }
-  .buttonsmv button {
-    padding: 1em 2.3em;
-    background-color: gold;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: white;
+    transform: translateX(800px);
   }
 }
 
-/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 460px) {
+  .HackTGame {
+    font-size: 1.5em;
+  }
+
+  header nav .buttons button {
+    padding: 1em 3em;
+    font-size: 1.1rem;
+  }
+  header nav {
+    margin-left: 8em;
+  }
+}
+
 @media (min-width: 576px) {
-  .headerMv img {
-    max-width: 9vw;
+  .HackTGame {
+    font-size: 1.7em;
     padding: 1em;
   }
-  .headerMv {
-    padding: 1.9em;
-    padding-right: 6em;
+
+  header nav .buttons button {
+    padding: 1em 3.2em;
+    font-size: 1.1rem;
   }
-  .headerMv h2 {
-    font-size: 2.5rem;
+  header nav {
+    margin-left: 10em;
+    font-size: 1.1rem;
   }
-  .menumv img {
-    max-width: 7.4vw;
-  }
-  .menumv {
-    font-size: 1.6rem;
-  }
-  .buttonsmv button {
-    padding: 1em 2em;
-    background-color: gold;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: white;
+  header nav img {
+    max-width: 7vw;
   }
 }
 
-/* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .headerMv img {
-    max-width: 9vw;
-    padding: 1.4em;
+  header nav .buttons button {
+    padding: 1em 3.8em;
+    font-size: 1.2rem;
   }
-  .headerMv {
-    padding: 2.5em;
-    padding-right: 7em;
+  header nav {
+    margin-left: 15em;
+    font-size: 1.3rem;
   }
-  .headerMv h2 {
-    font-size: 2.8rem;
-  }
-  .menumv img {
-    max-width: 7.4vw;
-  }
-  .menumv {
-    font-size: 2rem;
-  }
-  .buttonsmv button {
-    padding: 1em 2.3em;
-    background-color: gold;
-    font-size: 1.9rem;
-    font-weight: 700;
-    color: white;
+  header nav img {
+    max-width: 6.9vw;
   }
 }
 
-/* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .two {
-    display: none;
+  #iconsId {
+    order: 1;
+  }
+  #buttonsId {
+    order: 2;
+  }
+  #optionsId {
+    order: 3;
+  }
+  .hide {
+    transform: translateY(-200px);
   }
 
-  .one {
-    height: 18vh;
+  header {
+    height: 10vh;
     position: relative;
     z-index: 1;
     display: flex;
     width: 100vw;
     font-family: Poppins;
-    /* transition: 5s; */
-    /* background-color: aqua; */
+    transition: 3s;
   }
-  header h2 {
+  header .HackTGame {
     margin-top: 1.2em;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-left: 2em;
     font-family: Titillium Web;
     font-weight: 900;
     color: white;
+    background-color: transparent;
   }
-  header h2 .yellow {
+  header .HackTGame .yellow {
     color: gold;
+  }
+  header .HackTGame img {
+    display: none;
+  }
+  header nav img {
+    display: none;
   }
   header nav {
     display: flex;
+    flex-direction: row;
+    max-height: 10vh;
     margin-left: auto;
     width: 50%;
-  }
-  nav .fa-brands {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+    margin-right: 2em;
     color: white;
-    padding: 1 em;
-    /* background-color: aqua; */
+    background-color: transparent;
+
     font-size: 1rem;
   }
-  nav .icons {
+  header nav .icons {
     display: flex;
     padding: 1em;
     justify-content: space-evenly;
@@ -249,124 +212,125 @@
     width: 50%;
     align-items: center;
   }
-  nav .fa-brands:hover {
+  header nav .icons .fa-brands {
+    color: white;
+    padding: 1 em;
+    /* background-color: aqua; */
+    font-size: 1rem;
+  }
+  header nav .icons .fa-brands:hover {
     color: gold;
   }
-  nav {
+  header nav .options {
     display: flex;
     flex-wrap: wrap;
     margin-top: 0.5em;
-    margin-right: 2em;
+    /* margin-right: 2em; */
+    padding-top: none;
+    width: 100%;
   }
-  nav ul {
+  header nav .options ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
-    /* background-color: brown; */
     padding: 1em;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 400;
     list-style: none;
     align-content: center;
   }
-  nav li a {
-    /* padding-left: 2em; */
-    margin-right: 2.2em;
+  header nav .options li a {
     color: white;
     text-decoration: none;
   }
-  nav li a:hover {
+  header nav li {
+    list-style: none;
+    border-bottom: none;
+    padding-top: 0;
+  }
+  header nav .options li a:hover {
     color: gold;
   }
-  nav .buttons {
+  header nav .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: blueviolet; */
+    border-collapse: collapse;
     width: 50%;
   }
-  nav .buttons button {
-    font-size: 0.8rem;
-    font-weight: 600;
+  header nav .buttons button {
+    font-size: 0.7rem;
+    font-weight: 500;
     padding: 0.8em 2.2em;
     background-color: gold;
     color: white;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
   }
   nav .buttons button:hover {
     color: black;
   }
-  nav .buttons :first-child {
+  header nav .buttons :first-child {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    padding-left: 2.3em;
+    padding-left: 2.7em;
   }
-  nav .buttons :last-child {
+  header nav .buttons :last-child {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-left: 1.2px solid rgb(191, 189, 189);
-    padding-left: 2em;
-    margin-right: 1.5em;
+    /* border-left: 0.2px solid rgb(191, 189, 189); */
+    padding-left: 2.5em;
+    /* margin-right: 1.5em; */
   }
-  .hide {
-    transform: translateY(-200px);
-  }
-  .menumv {
-    display: none;
-    height: 0;
+  .invisible {
+    transform: none;
   }
 }
-
-/* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  nav ul {
-    font-size: 1rem;
-    font-weight: 900;
+  header nav .options ul {
+    font-size: 1.2rem;
+    font-weight: 500;
   }
-  header h2 {
-    font-size: 1.8rem;
+  header .HackTGame {
+    font-size: 1.3rem;
+    align-self: center;
   }
-  nav .fa-brands {
+  header nav .icons .fa-brands {
     font-size: 1.3rem;
   }
-  nav .buttons button {
-    font-size: 1rem;
-    font-weight: 800;
+  header nav .buttons button {
+    font-size: 0.8rem;
+    font-weight: 600;
   }
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  nav ul {
-    font-size: 1.2rem;
+  header nav .options ul {
+    font-size: 1.3rem;
     font-weight: 900;
   }
-  header h2 {
-    font-size: 2.2rem;
+  header .HackTGame {
+    font-size: 1.7rem;
   }
-  nav .fa-brands {
+  header nav .icons .fa-brands {
     font-size: 1.5rem;
   }
-  nav .buttons button {
+  header nav .buttons button {
     font-size: 1.1rem;
     font-weight: 900;
   }
-  nav .buttons :first-child {
+  header nav .buttons :first-child {
     border-top-left-radius: 22px;
     border-bottom-left-radius: 22px;
     padding-left: 2.3em;
   }
-  nav .buttons :last-child {
+  header nav .buttons :last-child {
     border-top-right-radius: 22px;
     border-bottom-right-radius: 22px;
-    border-left: 1.2px solid rgb(191, 189, 189);
     padding-left: 2em;
-    margin-right: 1.5em;
   }
 }
 
-img {
-  position: absolute;
-  background-size: cover;
-  max-width: 100vw;
-}
+

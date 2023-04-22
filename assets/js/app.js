@@ -1,7 +1,5 @@
+// primera parte para conseguir que el header se mueva hacia arriba con el scroll
 let header = document.querySelector("header");
-// window.addEventListener("scroll",(e)=>{
-//     header.classList.add("hide")
-// })
 let InitialScrollPos = window.pageYOffset; //almacenamos la posición inicial del scroll
 window.addEventListener("scroll", () => {
   const currentScrollPos = window.pageYOffset; //almacenamos la posición actual del scroll
@@ -16,14 +14,12 @@ window.addEventListener("scroll", () => {
   }
   InitialScrollPos = currentScrollPos; //actualizamos la posición anterior del scroll
 });
-
-let menumv = document.querySelector(".menumv");
-let headerMv = document.querySelector(".headerMv");
-headerMv.lastElementChild.firstElementChild.addEventListener("click", () => {
-  menumv.classList.remove("invisible");
-  headerMv.classList.add("absoluteMode");
-  menumv.firstElementChild.addEventListener("click", () => {
-    menumv.classList.add("invisible");
-    headerMv.classList.remove("absoluteMode");
-  });
+//quitamos y ponemos la clase invisible para el menu de modo movil
+let nav = document.querySelector("nav");
+let TG = document.querySelector(".HackTGame");
+TG.addEventListener("click", () => {
+  nav.classList.remove("invisible");
+});
+nav.firstElementChild.firstElementChild.addEventListener("click", () => {
+  nav.classList.add("invisible");
 });
