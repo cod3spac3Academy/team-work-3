@@ -29,7 +29,7 @@ main section.team h2 {
 main section.team h2 span {
     display: block;
     color: var(--yellow);
-    margin-top: -0.4em;
+    margin-top: -.4em;
 }
 
 main section.team p {
@@ -37,7 +37,7 @@ main section.team p {
     font-weight: 300;
     font-size: 1.2rem;
     color: var(--gray);
-    padding: 0.5em 1.5em 0 0;
+    padding: .5em 1.5em 0 0;
 }
 
 main section.team .card {
@@ -59,7 +59,7 @@ main section.team .card span {
     font-size: 1.7rem;
     color: var(--dark-gray);
     background-color: var(--yellow);
-    padding: 0.6em 2em;
+    padding: .6em 2em;
     position: absolute;
     left: 25%;
     top: 71%;
@@ -119,8 +119,10 @@ main section.team .card:hover i:active {
 
     main section.team .card span {
         font-size: 1.4rem;
-        padding: 0.7em 2.5em;
         left: 15%;
+        width: 70%;
+        display: flex;
+        justify-content: center;
     }
 
     main section.team .card .icon {
@@ -134,7 +136,8 @@ main section.team .card:hover i:active {
     }
 
     main section.team .card span {
-        padding: 1em 6em;
+        padding: 1em 2em;
+        text-align: center;
     }
 
     main section.team .card .icon {
