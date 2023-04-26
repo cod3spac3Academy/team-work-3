@@ -10,15 +10,15 @@ main {
     width: 100vw;
     height: 100vh;
     background-image: url("../../img/slider/1.jpg");
-    background-position: 48% 0;
+    background-position: center;
     background-size: cover;
     overflow: hidden;
-    animation-name: fade;
-    animation-duration: 1s;
-    transition: background-image 1.5s ease;
-    @media (min-width: 768px) {
-      background-position: center;
-    }
+    // animation-name: fade;
+    // animation-duration: 1s;
+    // transition: background-image 1.5s ease;
+    // @media (min-width: 768px) {
+    //   background-position: center;
+    // }
     & .hidden {
       display: none;
     }
