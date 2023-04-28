@@ -19,6 +19,9 @@ main section.slider {
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  animation-name: fade;
+  animation-duration: 1s;
+  transition: background-image 1.5s ease;
 }
 main section.slider .hidden {
   display: none;
@@ -106,5 +109,11 @@ main section.slider .dot-container .dot.active {
 @media (min-width: 768px) {
   main section.slider .dot-container .dot {
     margin: 0 6%;
+  }
+}
+@media (min-width: 992px) {
+  main section.slider .dot-container .dot {
+    height: 3rem;
+    width: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */

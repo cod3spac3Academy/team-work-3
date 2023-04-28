@@ -13,12 +13,9 @@ main {
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    // animation-name: fade;
-    // animation-duration: 1s;
-    // transition: background-image 1.5s ease;
-    // @media (min-width: 768px) {
-    //   background-position: center;
-    // }
+     animation-name: fade;
+    animation-duration: 1s;
+    transition: background-image 1.5s ease;
     & .hidden {
       display: none;
     }
@@ -98,10 +95,10 @@ main {
         @media (min-width: 768px) {
           margin: 0 6%;
         }
-        // @media (min-width: 992px) {
-        //   height: 2rem;
-        //   width:3%;
-        // }
+         @media (min-width: 992px) {
+         height: 3rem;
+          width:3rem;
+         }
       }
     }
   }
