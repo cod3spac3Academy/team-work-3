@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   let dots = document.querySelector(".dot-container");
   let interval = null;
 
-  slideAuto(slides, dots, 6, interval);
+  interval = slideAuto(slides, dots, 6, interval);
   slideManual(slides, dots, 6, interval);
 });
 
@@ -16,23 +16,15 @@ const slideAuto = (slides, dots, length, interval) => {
     dots.querySelector(".active").classList.remove("active");
     dots.children[slideIndex - 1].classList.add("active");
     slides.style.backgroundImage = `url('./img/slider/${slideIndex}.jpg')`;
-    // slideIndex++;
-    // if (dots.children[slideIndex - 2].classList.contains("active")) {
-    //   dots.children[slideIndex - 2].classList.remove("active");
-    //   dots.children[slideIndex - 1].classList.add("active");
-    // }
-    // if (slideIndex > length) {
-    //   slideIndex = 1;
-    // }
-    // slides.style.backgroundImage = `url('./img/slider/${slideIndex}.jpg')`;
   }, 2000);
+  return interval
 };
 // Function to change the slide when a dot is clicked
 const slideManual = (slides, dots, length, interval) => {
   let slideIndex = 1;
   // Add an event listener on each dot
   Array.from(dots.children).forEach((dot, index) => {
-    dot.addEventListener("click", () => {
+    dot.addEventListener("click", (e) => {
       // Remove the "active" class from all dots
       Array.from(dots.children).forEach((dot) => {
         dot.classList.remove("active");
