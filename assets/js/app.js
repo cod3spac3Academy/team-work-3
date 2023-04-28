@@ -23,36 +23,35 @@ window.addEventListener("load", () => {
     });
   });
 
+  //Creo una un array donde estaran todas las imagenes
+  const imagePaths = [
+    "./img/slider/1.jpg",
+    "./img/slider/2.jpg",
+    "./img/slider/3.jpg",
+    "./img/slider/4.jpg",
+    "./img/slider/5.jpg",
+    "./img/slider/6.jpg",
+  ];
+
+  const autoSlide = (slideshow, buttonList) => {
+    let index = 0;
+    interval = setInterval(() => {
+      slideshow.classList.add("fade-in");
+      setTimeout(() => {
+        if (slideshow.classList.contains("fade-in")) {
+          slideshow.classList.remove("fade-in");
+        }
+      }, 500);
+      index = (index + 1) % imagePaths.length;
+      slideshow.style.backgroundImage = `url('${imagePaths[index]}')`;
+      buttonList.forEach((button) => {
+        if (button.classList.contains("active")) {
+          button.classList.remove("active");
+        }
+      });
+      buttonList[index].classList.add("active");
+    }, 3000);
+  };
+
   autoSlide(slideshow, buttonList);
-
 });
-
-//Creo una un array donde estaran todas las imagenes
-const imagePaths = [
-  "./img/slider/1.jpg",
-  "./img/slider/2.jpg",
-  "./img/slider/3.jpg",
-  "./img/slider/4.jpg",
-  "./img/slider/5.jpg",
-  "./img/slider/6.jpg",
-];
-
-const autoSlide = (slideshow, buttonList) => {
-  let index = 0;
-  interval = setInterval(() => {
-    slideshow.classList.add("fade-in");
-    setTimeout(() => {
-      if (slideshow.classList.contains("fade-in")) {
-        slideshow.classList.remove("fade-in");
-      }
-    }, 500);
-    index = (index + 1) % imagePaths.length;
-    slideshow.style.backgroundImage = `url('${imagePaths[index]}')`;
-    buttonList.forEach((button) => {
-      if (button.classList.contains("active")) {
-        button.classList.remove("active");
-      }
-    });
-    buttonList[index].classList.add("active");
-  }, 3000);
-};
