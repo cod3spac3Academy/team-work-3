@@ -16,19 +16,9 @@ main section.slider {
   width: 100vw;
   height: 100vh;
   background-image: url("../../img/slider/1.jpg");
-  background-position: 48% 0;
+  background-position: center;
   background-size: cover;
   overflow: hidden;
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  transition: background-image 1.5s ease;
-}
-@media (min-width: 768px) {
-  main section.slider {
-    background-position: center;
-  }
 }
 main section.slider .hidden {
   display: none;
@@ -77,14 +67,6 @@ main section.slider .text p {
     font-size: 2rem;
   }
 }
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -124,11 +106,5 @@ main section.slider .dot-container .dot.active {
 @media (min-width: 768px) {
   main section.slider .dot-container .dot {
     margin: 0 6%;
-  }
-}
-@media (min-width: 992px) {
-  main section.slider .dot-container .dot {
-    height: 3rem;
-    width: 3rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -27,7 +27,6 @@ const slideAuto = (slides, dots, length, interval) => {
     // slides.style.backgroundImage = `url('./img/slider/${slideIndex}.jpg')`;
   }, 2000);
 };
-
 // Function to change the slide when a dot is clicked
 const slideManual = (slides, dots, length, interval) => {
   let slideIndex = 1;
